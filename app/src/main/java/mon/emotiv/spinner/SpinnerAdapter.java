@@ -30,19 +30,15 @@ public class SpinnerAdapter extends ArrayAdapter<SpinnerModel> {
 
     @Override
     public View getDropDownView(int position, View convertView, ViewGroup parent) {
-        // TODO Auto-generated method stub
         return getCustomView(position, convertView, parent);
     }
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        // TODO Auto-generated method stub
         return getCustomView(position, convertView, parent);
     }
 
     public View getCustomView(int position, View convertView, ViewGroup parent) {
-        // TODO Auto-generated method stub
-        // return super.getView(position, convertView, parent);
         Activity activity = (Activity) context;
         LayoutInflater inflater = activity.getLayoutInflater();
         View row = inflater.inflate(R.layout.row, parent, false);
@@ -56,7 +52,6 @@ public class SpinnerAdapter extends ArrayAdapter<SpinnerModel> {
         } else {
             icon.setVisibility(View.INVISIBLE);
         }
-
         return row;
     }
 }

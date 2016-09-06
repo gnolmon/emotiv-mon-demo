@@ -1,4 +1,4 @@
-package mon.emotiv.connection;
+package mon.emotiv.dataget;
 
 /**
  * Created by admin on 9/5/2016.

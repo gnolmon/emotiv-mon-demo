@@ -5,7 +5,7 @@ import android.util.AttributeSet;
 import android.widget.Spinner;
 
 
-public class CustomSpinner extends Spinner {
+    public class CustomSpinner extends Spinner {
 
     public CustomSpinner(Context context) {
         super(context);
@@ -22,11 +22,9 @@ public class CustomSpinner extends Spinner {
 
     @Override
     public void setSelection(int position) {
-        // TODO Auto-generated method stub
         boolean sameSelected = position == getSelectedItemPosition();
         super.setSelection(position);
         if (sameSelected) {
-            // Spinner does not call the OnItemSelectedListener if the same item is selected, so do it manually now
             if (this.getOnItemSelectedListener() != null)
                 getOnItemSelectedListener().onItemSelected(null, null, position, 0);
         }
@@ -39,7 +37,6 @@ public class CustomSpinner extends Spinner {
 
         super.setSelection(position, animate);
         if (sameSelected) {
-            // Spinner does not call the OnItemSelectedListener if the same item is selected, so do it manually now
             getOnItemSelectedListener().onItemSelected(this, getSelectedView(), position, getSelectedItemId());
         }
     }
